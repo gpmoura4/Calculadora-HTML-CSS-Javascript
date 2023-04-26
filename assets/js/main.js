@@ -9,7 +9,7 @@ function CreatesCalc() {
 
     this.keyListener = () => {
         this.inputCalc.addEventListener('keypress', (event) => {
-
+            //Veriricando se o espaço foi apertado
             if (event.keyCode === 13) {
                 this.realizesOperation();
                 this.inputCalc.focus();
@@ -30,7 +30,7 @@ function CreatesCalc() {
 
     this.realizesOperation = () => {
         let operation = this.inputCalc.value;
-        /*Expressão que verifica  se a entrada é apenas nums ou caracteres */
+        /*Expressão que verifica  se a entrada é apenas nums ou caracteres*/
         const regex = /^[0-9+\-*/.]+$/;
 
         try {
